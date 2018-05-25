@@ -236,7 +236,7 @@ public class MarksSummative extends javax.swing.JFrame
         //grades.add(Integer.parseInt(markInput.getText()));
 
         //this loop ensures that only numbers between 0 and 100 are inputted into the array
-        if (mark>=0 && mark<=100) 
+        if (mark >= 0 && mark <= 100) 
         {
             studentGrades.add(mark);
             gradeOutput.append(Double.toString(mark)+"\n");
@@ -250,6 +250,7 @@ public class MarksSummative extends javax.swing.JFrame
             //the number will not be added to the list
             errorMessage.setText("Please enter a valid grade");
         }
+        //allow user to use addbutton again after entering initial value
         addButton.setEnabled(true);
     }//GEN-LAST:event_addButtonActionPerformed
 
@@ -259,7 +260,7 @@ public class MarksSummative extends javax.swing.JFrame
         double grade2 = gradeLevel2();
         double grade3 = gradeLevel3();
         double grade4 = gradeLevel4();
-         
+        //declaration of variables and implementation of code
         double average = studentAverage();
         double max = studentMaximum();
         double min = studentMinimum();
@@ -271,10 +272,12 @@ public class MarksSummative extends javax.swing.JFrame
     }//GEN-LAST:event_analyseButtonActionPerformed
     
     private double studentMinimum() {
+        //returns minimum of input values from student
         return (Collections.min(studentGrades));
     }
     
     private double studentMaximum() {
+        //returns maximum of inplut values from the student
         return (Collections.max(studentGrades));
     }
     
@@ -292,7 +295,9 @@ public class MarksSummative extends javax.swing.JFrame
         {
             sum += studentGrades.get(i);
         }
+        //average of the students grades
         return sum / studentGrades.size();
+        analysisOutput.setText("Student average: " + studentAverage);
     }
    
     private void sortButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sortButtonActionPerformed
@@ -305,8 +310,6 @@ public class MarksSummative extends javax.swing.JFrame
         }
         
 //        Collections.sort(studentGrades);
-//        Collections.reverse(studentGrades);
-//        
 //        gradeOutput.setText(" ");
 //        for (int i = 0; i < studentGrades.size(); i++) 
 //        {
