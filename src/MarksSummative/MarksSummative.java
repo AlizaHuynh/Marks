@@ -194,7 +194,7 @@ public class MarksSummative extends javax.swing.JFrame
         {
             //this loop will count the number of grades in between 60 and 70
             //and assign it to a level 2 grade
-            if ((studentGrades.get(i) >= 60) && (studentGrades.get(i) < 70)) {
+            if (studentGrades.get(i) >= 60 && studentGrades.get(i) < 70) {
                 count += 1;
             }
         }
@@ -207,7 +207,7 @@ public class MarksSummative extends javax.swing.JFrame
         {
             //this loop will count the grades in between 70 and 80
             //and assign it to a level 3 grade
-            if ((studentGrades.get(i) >= 70) && (studentGrades.get(i) < 80)) {
+            if (studentGrades.get(i) >= 70 && studentGrades.get(i) < 80) {
                 count += 1;
             }
         }
@@ -236,7 +236,7 @@ public class MarksSummative extends javax.swing.JFrame
         //grades.add(Integer.parseInt(markInput.getText()));
 
         //this loop ensures that only numbers between 0 and 100 are inputted into the array
-        if ((mark>=0) && (mark<=100)) 
+        if (mark>=0 && mark<=100) 
         {
             studentGrades.add(mark);
             gradeOutput.append(Double.toString(mark)+"\n");
