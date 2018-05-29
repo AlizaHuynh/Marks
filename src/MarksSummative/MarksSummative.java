@@ -234,7 +234,13 @@ public class MarksSummative extends javax.swing.JFrame
         
         //Collections.addAll(grades, markInput.getText());
         //grades.add(Integer.parseInt(markInput.getText()));
-
+        //Collections.sort(studentGrades);
+        //gradeOutput.setText(" ");
+        //for (int i = 0; i < studentGrades.size(); i++) 
+        //{
+                    //take value from input field and use it for
+        //          gradeOutput.append(studentGrades.get(i)+"\n");
+        //}
         //this loop ensures that only numbers between 0 and 100 are inputted into the array
         if (mark >= 0 && mark <= 100) 
         {
@@ -256,14 +262,15 @@ public class MarksSummative extends javax.swing.JFrame
 
     private void analyseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_analyseButtonActionPerformed
         double failingGrade = gradeLevelFail();
-        double grade1 = gradeLevel1();
-        double grade2 = gradeLevel2();
-        double grade3 = gradeLevel3();
-        double grade4 = gradeLevel4();
+        double level1= gradeLevel1();
+        double level2 = gradeLevel2();
+        double level3 = gradeLevel3();
+        double level4 = gradeLevel4();
         //declaration of variables and implementation of code
         double average = studentAverage();
         double max = studentMaximum();
         double min = studentMinimum();
+        //int range = max - min
         double range = studentGradeRange(min, max);
         
         //this displays text in the final text area upon pressing analyze button
@@ -306,16 +313,10 @@ public class MarksSummative extends javax.swing.JFrame
         for (int i = 0; i < studentGrades.size(); i++) 
         {
             studentGrades.toString();
-            gradeOutput.setText(gradeOutput.getText()+ studentGrades.get(i) + "\n");
+            //get grades from previous input and then sort data accordingly
+            gradeOutput.setText(gradeOutput.getText() + studentGrades.get(i) + "\n");
         }
         
-//        Collections.sort(studentGrades);
-//        gradeOutput.setText(" ");
-//        for (int i = 0; i < studentGrades.size(); i++) 
-//        {
-                    //take value from input field and use it for
-//                       gradeOutput.append(studentGrades.get(i)+"\n");
-//        }
     }//GEN-LAST:event_sortButtonActionPerformed
 
     
